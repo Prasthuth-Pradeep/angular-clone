@@ -1,0 +1,24 @@
+{
+    "project": {
+      "name": "Angular clone",
+      "root": "src",
+      "outputPath": "dist",
+      "entryFile": "src/main.ts",
+      "indexFile": "src/index.html"
+    },
+    "buildOptions": {
+      "minify": true,
+      "sourcemap": true
+    },
+    "environments": {
+      "development": {
+        "minify": false,
+        "sourcemap": true
+      },
+      "production": {
+        "minify": true,
+        "sourcemap": false
+      }
+    }
+  }
+  

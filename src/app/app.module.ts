@@ -1,12 +1,8 @@
 import { AppComponent } from './app.component';
-import { FooterComponent } from './components/footer.component';
 
 export class AppModule {
-  constructor() {
+  bootstrap(): void {
     const appComponent = new AppComponent();
-    appComponent.render();
-
-    const footerComponent = new FooterComponent();
-    footerComponent.render('app-root');
+    appComponent.render(); // Render the main component, which internally renders FooterComponent
   }
 }

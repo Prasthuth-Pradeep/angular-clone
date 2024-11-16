@@ -1,6 +1,4 @@
+import { bootstrapModule } from '@framework/bootstrap'; // Path to the utility function
 import { AppModule } from './app/app.module';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const appModule = new AppModule() as unknown as { bootstrap(): void };
-  appModule.bootstrap();
-});
+bootstrapModule(AppModule);

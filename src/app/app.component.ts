@@ -4,13 +4,14 @@ import { Component } from '@framework/decorators';
   selector: 'app-root',
   template: `
     <div class="app-container">
-      <h1>Hello from AppComponent!</h1>
+      <h1>Hello from AppComponent! {{ name }}</h1>
     </div>
   `
 })
-export class AppComponent implements Renderable {
-  
-  render(): void {
-    // The actual implementation will be added by the decorator
+export class AppComponent {
+  name: string = "AppComponent";
+
+  constructor() {
+    console.log('Component Name (from instance property):', this.name);
   }
 }

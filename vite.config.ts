@@ -14,6 +14,14 @@ export default defineConfig({
     outDir: `../${frameworkConfig.project.outputPath}`,
     sourcemap: envConfig.sourcemap !== undefined ? envConfig.sourcemap : frameworkConfig.buildOptions.sourcemap,
     minify: envConfig.minify !== undefined ? (envConfig.minify ? 'terser' : false) : frameworkConfig.buildOptions.minify,
+    // Add terserOptions if minifying with Terser
+    terserOptions: {
+      keep_classnames: true, // Preserve class names for Terser
+      keep_fnames: true      // Optionally preserve function names
+    },
+  },
+  esbuild: {
+    keepNames: true, // Preserve class names for esbuild
   },
   plugins: [
     checker({ typescript: true }),

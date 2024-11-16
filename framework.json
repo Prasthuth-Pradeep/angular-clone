@@ -7,7 +7,7 @@
       "indexFile": "src/index.html"
     },
     "buildOptions": {
-      "minify": true,
+      "minify": false,
       "sourcemap": true
     },
     "environments": {

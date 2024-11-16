@@ -1,4 +1,4 @@
-import { Component } from './decorators';
+import { Component } from '@framework/decorators';
 
 @Component({
   selector: 'app-root',

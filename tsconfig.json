@@ -1,16 +1,30 @@
 {
-    "compilerOptions": {
-      "target": "ES6",
-      "module": "ES6",
-      "moduleResolution": "node",
-      "lib": ["DOM", "DOM.Iterable", "ES6"],
-      "strict": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "experimentalDecorators": true,
-      "forceConsistentCasingInFileNames": true
-    },
-    "include": ["src/**/*.ts"],
-    "exclude": ["node_modules"]
-  }
-  
+  "compilerOptions": {
+    "target": "ES6", // Specifies the ECMAScript version for the compiled output, using modern features like 'let', 'const', and arrow functions.
+    "module": "ES6", // Sets the module system for output as native ES6 modules (using 'import' and 'export' syntax).
+    "moduleResolution": "node", // Uses Node.js module resolution, looking for 'node_modules' and following Node's import rules.
+    "lib": [
+      "DOM", // Includes type definitions for standard DOM APIs, enabling type-checking for 'document', 'window', etc.
+      "DOM.Iterable", // Adds support for iterable DOM types like 'NodeList', allowing iteration with 'for...of' loops.
+      "ES6" // Includes ES6 types like 'Promise', 'Map', 'Set', etc., ensuring compatibility with modern JavaScript features.
+    ],
+    "strict": true, // Enables all strict type-checking options for safer code, catching issues like 'null' and 'undefined' values.
+    "esModuleInterop": true, // Allows default imports from CommonJS modules, making it easier to import packages like 'import express from "express"'.
+    "skipLibCheck": true, // Skips type-checking of declaration files (.d.ts), improving compile speed but potentially missing type issues in those files.
+    "experimentalDecorators": true, // Enables experimental support for decorators, a feature used in frameworks like Angular for adding metadata to classes.
+    "forceConsistentCasingInFileNames": true, // Enforces consistent casing in module imports to avoid cross-platform issues (e.g., on Windows vs. Linux).
+    "baseUrl": "./", // Sets the base directory for resolving non-relative module imports, using the root of the project for simplified imports.
+    "paths": {
+      "*": [
+        "src/*" // Maps module imports to the 'src' directory, simplifying import paths like 'import { MyComponent } from "app/components"'.
+      ],
+      "@framework/*": ["src/framework/*"] // Map '@framework' to 'src/framework'
+    }
+  },
+  "include": [
+    "src/**/*" // Includes all TypeScript files in the 'src' directory and its subdirectories in the compilation.
+  ],
+  "exclude": [
+    "node_modules" // Excludes the 'node_modules' directory from compilation, as it contains third-party code that doesn't need to be recompiled.
+  ]
+}

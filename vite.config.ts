@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import checker from 'vite-plugin-checker';
+import tsconfigPaths from 'vite-tsconfig-paths';
 import * as fs from 'fs';
 
 const frameworkConfig = JSON.parse(fs.readFileSync('./framework.json', 'utf-8'));
@@ -16,5 +17,6 @@ export default defineConfig({
   },
   plugins: [
     checker({ typescript: true }),
+    tsconfigPaths()
   ],
 });

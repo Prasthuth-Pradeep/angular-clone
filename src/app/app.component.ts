@@ -1,19 +1,16 @@
-import { BaseComponent } from './base.component';
-import { FooterComponent } from './components/footer.component';
+import { Component } from './decorators';
 
-export class AppComponent extends BaseComponent {
-  selector = 'app-root'; // Unique selector for the main app component
-  template = `
+@Component({
+  selector: 'app-root',
+  template: `
     <div class="app-container">
       <h1>Hello from AppComponent!</h1>
-      <app-footer></app-footer> <!-- Placeholder for FooterComponent -->
     </div>
-  `;
-
+  `
+})
+export class AppComponent implements Renderable {
+  
   render(): void {
-    super.render();
-    // Render the FooterComponent within the <app-footer> placeholder
-    const footerComponent = new FooterComponent();
-    footerComponent.render('app-footer');
+    // The actual implementation will be added by the decorator
   }
 }

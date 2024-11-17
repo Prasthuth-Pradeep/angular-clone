@@ -1,4 +1,4 @@
-import { Module } from '@framework/module.decorator';
+import { Module } from '@framework/core';
 import { AppComponent } from './app.component';
 
 @Module({

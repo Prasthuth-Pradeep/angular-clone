@@ -1,4 +1,4 @@
-export function bootstrapModule(module: { new(): any; }) {
+export function bootstrapModule(module: { new (): any; }) {
     document.addEventListener('DOMContentLoaded', () => {
       try {
         const appModuleInstance = new module();

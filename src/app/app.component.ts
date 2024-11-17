@@ -1,19 +1,21 @@
-import { Component } from '@framework/decorators';
+import { Component } from '@framework/core';
 
 @Component({
   selector: 'app-root',
   template: `
     <div class="app-container">
-      <h1>Hello from AppComponent! {{ name }}</h1>
+      <h1>Hello from AppComponent!</h1>
+      <span>{{ name }}</span>
       <p>{{ appName }}</p>
     </div>
   `
 })
 export class AppComponent {
-  name: string = "AppComponent";
+  name: string = "Prasthuth Pradeep";
   appName: string = "Hiiiii!!!!!";
 
   constructor() {
-    console.log('Component Name (from instance property):', this.name);
+    console.log('AppComponent Constructor Called');
+    console.trace('Trace for AppComponent instantiation');
   }
 }

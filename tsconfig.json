@@ -12,6 +12,7 @@
     "esModuleInterop": true, // Allows default imports from CommonJS modules, making it easier to import packages like 'import express from "express"'.
     "skipLibCheck": true, // Skips type-checking of declaration files (.d.ts), improving compile speed but potentially missing type issues in those files.
     "experimentalDecorators": true, // Enables experimental support for decorators, a feature used in frameworks like Angular for adding metadata to classes.
+    "emitDecoratorMetadata":true,
     "forceConsistentCasingInFileNames": true, // Enforces consistent casing in module imports to avoid cross-platform issues (e.g., on Windows vs. Linux).
     "baseUrl": "./", // Sets the base directory for resolving non-relative module imports, using the root of the project for simplified imports.
     "paths": {
@@ -25,6 +26,7 @@
     "src/**/*" // Includes all TypeScript files in the 'src' directory and its subdirectories in the compilation.
   ],
   "exclude": [
-    "node_modules" // Excludes the 'node_modules' directory from compilation, as it contains third-party code that doesn't need to be recompiled.
+    "node_modules", // Excludes the 'node_modules' directory from compilation, as it contains third-party code that doesn't need to be recompiled.
+    "dist"
   ]
 }

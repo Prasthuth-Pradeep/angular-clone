@@ -2,13 +2,7 @@ import { Component } from '@framework/core';
 
 @Component({
   selector: 'app-root',
-  template: `
-    <div class="app-container">
-      <h1>Hello from AppComponent!</h1>
-      <span>{{ name }}</span>
-      <p>{{ appName }}</p>
-    </div>
-  `
+  templateUrl: './app.component.html' // Specify the path to the external HTML file
 })
 export class AppComponent {
   name: string = "Prasthuth Pradeep";
@@ -16,6 +10,5 @@ export class AppComponent {
 
   constructor() {
     console.log('AppComponent Constructor Called');
-    console.trace('Trace for AppComponent instantiation');
   }
 }
